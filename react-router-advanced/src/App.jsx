@@ -11,12 +11,17 @@ function App() {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/profile">Profile</Link>
-        <Link to="/post/1">Blog Post</Link>
+        <Link to="/blog/1">Blog Post</Link> {/* Example blog post link */}
       </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
+        
+        {/* Protected Route for Profile */}
         <Route path="/profile/*" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-        <Route path="/post/:postId" element={<BlogPost />} /> {/* Dynamic Route */}
+        
+        {/* Dynamic Route for Blog Posts */}
+        <Route path="/blog/:id" element={<BlogPost />} /> {/* Dynamic route for blog posts */}
       </Routes>
     </Router>
   );
