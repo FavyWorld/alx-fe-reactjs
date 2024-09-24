@@ -39,6 +39,7 @@ const Search = () => {
         <div className="user-info">
           <img src={user.avatar_url} alt="User Avatar" />
           <p>{user.name}</p>
+          <p>Username: {user.login}</p> {/* Display GitHub username (login) */}
           <a href={user.html_url} target="_blank" rel="noreferrer">View Profile</a>
         </div>
       )}
